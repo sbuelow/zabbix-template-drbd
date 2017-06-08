@@ -4,6 +4,7 @@ DRBD Resources monitoring template for Zabbix
 Using _drbdadm_ tool for monitoring of DRBD Resources
 
 Tested on Zabbix Version 3.0
+Tested on DRBD 8.3.x
 
 FEATURES
 --------
@@ -23,7 +24,7 @@ INSTALLATION
   * Restart zabbix agent
 * Server
   * Import template __template_drbd.xml__ file
-  * Modify /etc/sudoers file to include directives from __sudo__ file
+  * Modify /etc/sudoers file to include directives from __sudo__ file (or fill in __/etc/sudoers.d/zabbix__ if supported. Remember to chmod it to 0440)
 
 AUTHOR
 ------

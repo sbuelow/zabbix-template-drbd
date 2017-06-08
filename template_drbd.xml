@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2017-02-06T16:16:20Z</date>
+    <date>2017-06-08T10:15:06Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -468,6 +468,16 @@
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DRBD:drbd.role_local[{#DRBDNAME}].str(Secondary)}=1 and {Template DRBD:drbd.role_remote[{#DRBDNAME}].str(Secondary)}=1</expression>
+                            <name>DRBD {#DRBDNAME} Local and Remote Roles are both Secondary</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
                             <description/>
                             <type>0</type>
                             <dependencies/>

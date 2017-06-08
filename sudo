@@ -1,1 +1,2 @@
-%zabbix     ALL=(ALL)   NOPASSWD    /sbin/drbdadm
+#
+%zabbix     ALL=(ALL)   NOPASSWD:   /sbin/drbdadm
