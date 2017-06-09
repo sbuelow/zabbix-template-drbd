@@ -22,9 +22,9 @@ INSTALLATION
 * Agent
   * Copy __userparameter_drbd.conf__ to __/etc/zabbix/zabbix_agentd.d/userparameter_drbd.conf__
   * Restart zabbix agent
+  * Modify /etc/sudoers file to include directives from __sudo__ file (or fill in __/etc/sudoers.d/zabbix__ if supported. Remember to chmod it to 0440 for safety reasons)
 * Server
   * Import template __template_drbd.xml__ file
-  * Modify /etc/sudoers file to include directives from __sudo__ file (or fill in __/etc/sudoers.d/zabbix__ if supported. Remember to chmod it to 0440)
 
 AUTHOR
 ------
