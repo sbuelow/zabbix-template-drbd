@@ -463,7 +463,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template DRBD:drbd.cstate[{#DRBDNAME}].str(Connected)}&lt;&gt;1</expression>
+                            <expression>{Template DRBD:drbd.cstate[{#DRBDNAME}].str(Connected)}&lt;&gt;1 and {Template DRBD:drbd.cstate[{#DRBDNAME}].str(VerifyT)}&lt;&gt;1 and {Template DRBD:drbd.cstate[{#DRBDNAME}].str(VerifyS)}&lt;&gt;1</expression>
                             <name>DRBD {#DRBDNAME} Device is not Connected on {HOST.NAME}</name>
                             <url/>
                             <status>0</status>
