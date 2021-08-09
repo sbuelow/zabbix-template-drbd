@@ -1,671 +1,191 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export>
-    <version>3.2</version>
-    <date>2019-12-04T15:03:03Z</date>
-    <groups>
-        <group>
-            <name>Templates</name>
-        </group>
-    </groups>
-    <templates>
-        <template>
-            <template>Template DRBD</template>
-            <name>Template DRBD</name>
-            <description/>
-            <groups>
-                <group>
-                    <name>Templates</name>
-                </group>
-            </groups>
-            <applications>
-                <application>
-                    <name>DRBD</name>
-                </application>
-            </applications>
-            <items>
-                <item>
-                    <name>DRBD Version</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>drbd.version</key>
-                    <delay>86400</delay>
-                    <history>90</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>DRBD</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-            </items>
-            <discovery_rules>
-                <discovery_rule>
-                    <name>DRBD Discovery</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <snmp_oid/>
-                    <key>drbd.discover</key>
-                    <delay>3600</delay>
-                    <status>0</status>
-                    <allowed_hosts/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <filter>
-                        <evaltype>0</evaltype>
-                        <formula/>
-                        <conditions>
-                            <condition>
-                                <macro>{#DRBDNAME}</macro>
-                                <value>.*</value>
-                                <operator>8</operator>
-                                <formulaid>A</formulaid>
-                            </condition>
-                        </conditions>
-                    </filter>
-                    <lifetime>30</lifetime>
-                    <description/>
-                    <item_prototypes>
-                        <item_prototype>
-                            <name>DRBD $1 Connection State</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.cstate[{#DRBDNAME}]</key>
-                            <delay>60</delay>
-                            <history>30</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Device</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.device[{#DRBDNAME}]</key>
-                            <delay>300</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Local Device State</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.dstate_local[{#DRBDNAME}]</key>
-                            <delay>60</delay>
-                            <history>30</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>DRBD states</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Remote Device State</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.dstate_remote[{#DRBDNAME}]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>DRBD states</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Local IP</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.ip[{#DRBDNAME}]</key>
-                            <delay>86400</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Local Device</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.mdev[{#DRBDNAME}]</key>
-                            <delay>86400</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Local Role</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.role_local[{#DRBDNAME}]</key>
-                            <delay>60</delay>
-                            <history>30</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>DRBD roles</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>DRBD $1 Remote Role</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>drbd.role_remote[{#DRBDNAME}]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>DRBD</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>DRBD roles</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                    </item_prototypes>
-                    <trigger_prototypes>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.cstate[{#DRBDNAME}].str(Connected)}&lt;&gt;1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Device is {ITEM.VALUE}</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>DRBD {#DRBDNAME} Local role is Unknown</name>
-                                    <expression>{Template DRBD:drbd.role_local[{#DRBDNAME}].last()}=2</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.role_local[{#DRBDNAME}].last()}=2 and {Template DRBD:drbd.role_remote[{#DRBDNAME}].last()}=2</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Local and Remote Roles are both Secondary</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>1</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.dstate_local[{#DRBDNAME}].last()}&lt;&gt;0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Local Device is not UpToDate ({ITEM.VALUE})</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.role_local[{#DRBDNAME}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Local Role has changed to {ITEM.VALUE}</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.role_local[{#DRBDNAME}].last()}=2</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Local role is Unknown</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Template DRBD:drbd.dstate_local[{#DRBDNAME}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>DRBD {#DRBDNAME} Local State has changed to {ITEM.VALUE}</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies/>
-                            <tags/>
-                        </trigger_prototype>
-                    </trigger_prototypes>
-                    <graph_prototypes>
-                        <graph_prototype>
-                            <name>drbd  {#DRBDNAME} state + role</name>
-                            <width>900</width>
-                            <height>200</height>
-                            <yaxismin>0.0000</yaxismin>
-                            <yaxismax>100.0000</yaxismax>
-                            <show_work_period>0</show_work_period>
-                            <show_triggers>0</show_triggers>
-                            <type>0</type>
-                            <show_legend>1</show_legend>
-                            <show_3d>0</show_3d>
-                            <percent_left>0.0000</percent_left>
-                            <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
-                            <ymin_item_1>0</ymin_item_1>
-                            <ymax_item_1>0</ymax_item_1>
-                            <graph_items>
-                                <graph_item>
-                                    <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>F63100</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template DRBD</host>
-                                        <key>drbd.role_local[{#DRBDNAME}]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>33FF33</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template DRBD</host>
-                                        <key>drbd.dstate_local[{#DRBDNAME}]</key>
-                                    </item>
-                                </graph_item>
-                            </graph_items>
-                        </graph_prototype>
-                    </graph_prototypes>
-                    <host_prototypes/>
-                </discovery_rule>
-            </discovery_rules>
-            <httptests/>
-            <macros/>
-            <templates/>
-            <screens/>
-        </template>
-    </templates>
-    <value_maps>
-        <value_map>
-            <name>DRBD roles</name>
-            <mappings>
-                <mapping>
-                    <value>0</value>
-                    <newvalue>Primary</newvalue>
-                </mapping>
-                <mapping>
-                    <value>1</value>
-                    <newvalue>Secondary</newvalue>
-                </mapping>
-                <mapping>
-                    <value>2</value>
-                    <newvalue>Unknown</newvalue>
-                </mapping>
-            </mappings>
-        </value_map>
-        <value_map>
-            <name>DRBD states</name>
-            <mappings>
-                <mapping>
-                    <value>0</value>
-                    <newvalue>Uptodate</newvalue>
-                </mapping>
-                <mapping>
-                    <value>1</value>
-                    <newvalue>Inconsistent</newvalue>
-                </mapping>
-                <mapping>
-                    <value>2</value>
-                    <newvalue>Diskless</newvalue>
-                </mapping>
-                <mapping>
-                    <value>3</value>
-                    <newvalue>Unknown</newvalue>
-                </mapping>
-            </mappings>
-        </value_map>
-    </value_maps>
-</zabbix_export>
+zabbix_export:
+  version: '5.2'
+  date: '2021-08-09T12:46:00Z'
+  groups:
+    -
+      name: Templates
+  templates:
+    -
+      template: 'Template DRBD'
+      name: 'Template DRBD'
+      groups:
+        -
+          name: Templates
+      applications:
+        -
+          name: DRBD
+      items:
+        -
+          name: 'DRBD Version'
+          key: drbd.version
+          delay: '86400'
+          trends: '0'
+          value_type: TEXT
+          applications:
+            -
+              name: DRBD
+      discovery_rules:
+        -
+          name: 'DRBD Discovery'
+          key: drbd.discover
+          delay: '60'
+          filter:
+            conditions:
+              -
+                macro: '{#DRBDNAME}'
+                value: '.*'
+                formulaid: A
+          item_prototypes:
+            -
+              name: 'DRBD $1 Connection State'
+              key: 'drbd.cstate[{#DRBDNAME}]'
+              delay: '60'
+              history: 30d
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: DRBD
+              trigger_prototypes:
+                -
+                  expression: '{str(Connected)}<>1'
+                  name: 'DRBD {#DRBDNAME} Device is {ITEM.VALUE}'
+                  priority: AVERAGE
+                  dependencies:
+                    -
+                      name: 'DRBD {#DRBDNAME} Local role is Unknown'
+                      expression: '{Template DRBD:drbd.role_local[{#DRBDNAME}].last()}=2'
+            -
+              name: 'DRBD $1 Device'
+              key: 'drbd.device[{#DRBDNAME}]'
+              delay: '300'
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: DRBD
+            -
+              name: 'DRBD $1 Local Device State'
+              key: 'drbd.dstate_local[{#DRBDNAME}]'
+              delay: '60'
+              history: 30d
+              trends: '0'
+              applications:
+                -
+                  name: DRBD
+              valuemap:
+                name: 'DRBD states'
+              trigger_prototypes:
+                -
+                  expression: '{last()}<>0'
+                  name: 'DRBD {#DRBDNAME} Local Device is not UpToDate ({ITEM.VALUE})'
+                  priority: AVERAGE
+                -
+                  expression: '{diff()}=1'
+                  name: 'DRBD {#DRBDNAME} Local State has changed to {ITEM.VALUE}'
+                  priority: AVERAGE
+            -
+              name: 'DRBD $1 Remote Device State'
+              key: 'drbd.dstate_remote[{#DRBDNAME}]'
+              delay: '60'
+              applications:
+                -
+                  name: DRBD
+              valuemap:
+                name: 'DRBD states'
+            -
+              name: 'DRBD $1 Local IP'
+              key: 'drbd.ip[{#DRBDNAME}]'
+              delay: '86400'
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: DRBD
+            -
+              name: 'DRBD $1 Local Device'
+              key: 'drbd.mdev[{#DRBDNAME}]'
+              delay: '86400'
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: DRBD
+            -
+              name: 'DRBD $1 Local Role'
+              key: 'drbd.role_local[{#DRBDNAME}]'
+              delay: '60'
+              history: 30d
+              applications:
+                -
+                  name: DRBD
+              valuemap:
+                name: 'DRBD roles'
+              trigger_prototypes:
+                -
+                  expression: '{diff()}=1'
+                  name: 'DRBD {#DRBDNAME} Local Role has changed to {ITEM.VALUE}'
+                  priority: AVERAGE
+                -
+                  expression: '{last()}=2'
+                  name: 'DRBD {#DRBDNAME} Local role is Unknown'
+                  priority: AVERAGE
+            -
+              name: 'DRBD $1 Remote Role'
+              key: 'drbd.role_remote[{#DRBDNAME}]'
+              delay: '60'
+              applications:
+                -
+                  name: DRBD
+              valuemap:
+                name: 'DRBD roles'
+          trigger_prototypes:
+            -
+              expression: '{Template DRBD:drbd.role_local[{#DRBDNAME}].last()}=2 and {Template DRBD:drbd.role_remote[{#DRBDNAME}].last()}=2'
+              name: 'DRBD {#DRBDNAME} Local and Remote Roles are both Secondary'
+              status: DISABLED
+              priority: AVERAGE
+          graph_prototypes:
+            -
+              name: 'drbd  {#DRBDNAME} state + role'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  item:
+                    host: 'Template DRBD'
+                    key: 'drbd.dstate_local[{#DRBDNAME}]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  item:
+                    host: 'Template DRBD'
+                    key: 'drbd.role_local[{#DRBDNAME}]'
+  value_maps:
+    -
+      name: 'DRBD roles'
+      mappings:
+        -
+          value: '0'
+          newvalue: Primary
+        -
+          value: '1'
+          newvalue: Secondary
+        -
+          value: '2'
+          newvalue: Unknown
+    -
+      name: 'DRBD states'
+      mappings:
+        -
+          value: '0'
+          newvalue: Uptodate
+        -
+          value: '1'
+          newvalue: Inconsistent
+        -
+          value: '2'
+          newvalue: Diskless
+        -
+          value: '3'
+          newvalue: Unknown
